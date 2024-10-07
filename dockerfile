@@ -14,5 +14,8 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 5000
 
+ENV FLASK_APP=app.py
+
 # Define the command to run the app
-CMD ["python", "app.py"]
+#CMD ["python", "app.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
